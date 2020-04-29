@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,27 +10,31 @@ namespace QueueStack
     {
         static void Main(string[] args)
         {
-            Queue<string> li = new Queue<string>();
-            li.Enqueue("Pierwszy");
-            li.Enqueue("Drugi");
-            li.Enqueue("Trzeci");
+            Queue<string> kolejka = new Queue<string>();
+            kolejka.Enqueue("Pierwszy");
+            kolejka.Enqueue("Drugi");
+            kolejka.Enqueue("Trzeci");
 
-            Console.WriteLine("Pierwszy element kolejki: " + li.Peek());
+            Console.WriteLine("Pierwszy element kolejki: " + kolejka.Peek());
+            Console.WriteLine(" ");
 
-            foreach (var item in li)
+            foreach (var item in kolejka)
             {
                 Console.WriteLine(item);
             }
-
+            Console.WriteLine(" ");
             Console.WriteLine("Nacisnij Enter aby usunac element z kolejki ");
             Console.ReadLine();
-            li.Dequeue();
-            Console.WriteLine("Pierwszy element kolejki: " + li.Peek());
+            kolejka.Dequeue();
+            Console.WriteLine(" ");
+            Console.WriteLine("Pierwszy element kolejki: " + kolejka.Peek());
+            Console.WriteLine(" ");
 
-            foreach (var item in li)
+            foreach (var item in kolejka)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine(" ");
             Console.WriteLine("Nacisnij Enter aby kontynulowac ze stosem");
             Console.ReadLine();
 
@@ -40,15 +44,17 @@ namespace QueueStack
             stack.Push("Trzeci");
 
             Console.WriteLine("Pierwszy element stosu: " + stack.Peek());
-            Console.WriteLine("Nacisnij Enter aby usunac element ze stosu");
-
+            Console.WriteLine(" ");
             foreach (var item in stack)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine(" ");
+            Console.WriteLine("Nacisnij Enter aby usunac element ze stosu");
             Console.ReadLine();
             stack.Peek();
-            Console.WriteLine("Pierwszy element stosu: " + stack.Pop());
+            Console.WriteLine("Pierwszy element stosu: " + stack.Pop()); 
+            Console.WriteLine(" ");
 
             foreach (var item in stack)
             {
@@ -59,3 +65,4 @@ namespace QueueStack
         }
     }
 }
+
